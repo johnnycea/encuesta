@@ -1,0 +1,62 @@
+[02-May-2019 21:08:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cargarHead() in /home/eyol16425/public_html/intranet/descarga/descargar_app.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 9
+[02-May-2019 21:09:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function cargarHead() in /home/eyol16425/public_html/intranet/descarga/descargar_app.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 9
+[02-May-2019 21:09:57 UTC] PHP Warning:  require_once(comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:09:57 UTC] PHP Fatal error:  require_once(): Failed opening required 'comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:10:36 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:10:36 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:10:38 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:10:38 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:10:40 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:10:40 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:10:58 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:10:58 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:11:01 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:11:01 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:11:07 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:11:07 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:11:10 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:11:10 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:12:45 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:12:45 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:28:05 UTC] PHP Warning:  require_once(comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 21:28:05 UTC] PHP Fatal error:  require_once(): Failed opening required 'comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:20:13 UTC] PHP Warning:  require_once(comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:20:13 UTC] PHP Fatal error:  require_once(): Failed opening required 'comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:20:35 UTC] PHP Warning:  require_once(comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:20:35 UTC] PHP Fatal error:  require_once(): Failed opening required 'comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:20:39 UTC] PHP Warning:  require_once(comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:20:39 UTC] PHP Fatal error:  require_once(): Failed opening required 'comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:27:56 UTC] PHP Warning:  require_once(comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:27:56 UTC] PHP Fatal error:  require_once(): Failed opening required 'comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:28:18 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:28:18 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:34:01 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:34:01 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:34:28 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:34:28 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:34:39 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:34:39 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:35:06 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:35:06 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:43:49 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:43:49 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:45:04 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:45:04 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:45:06 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:45:06 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:45:09 UTC] PHP Warning:  require_once(./comun.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:45:09 UTC] PHP Fatal error:  require_once(): Failed opening required './comun.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/descarga/descargar_app.php on line 2
+[02-May-2019 22:45:52 UTC] PHP Warning:  require_once(./clases/Usuario.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/comun.php on line 194
+[02-May-2019 22:45:52 UTC] PHP Fatal error:  require_once(): Failed opening required './clases/Usuario.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/comun.php on line 194
+[02-May-2019 22:55:45 UTC] PHP Warning:  require_once(./clases/Usuario.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/comun.php on line 194
+[02-May-2019 22:55:45 UTC] PHP Fatal error:  require_once(): Failed opening required './clases/Usuario.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/comun.php on line 194
+[02-May-2019 22:56:20 UTC] PHP Warning:  require_once(./clases/Usuario.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/comun.php on line 194
+[02-May-2019 22:56:20 UTC] PHP Fatal error:  require_once(): Failed opening required './clases/Usuario.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/comun.php on line 194
+[02-May-2019 22:57:15 UTC] PHP Warning:  require_once(./clases/Usuario.php): failed to open stream: No such file or directory in /home/eyol16425/public_html/intranet/comun.php on line 194
+[02-May-2019 22:57:15 UTC] PHP Fatal error:  require_once(): Failed opening required './clases/Usuario.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/eyol16425/public_html/intranet/comun.php on line 194

@@ -1,0 +1,14 @@
+[30-Apr-2019 19:09:39 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection refused in /home/eyol16425/public_html/intranet/clases/Conexion.php on line 44
+[30-Apr-2019 19:09:39 UTC] PHP Warning:  mysqli_set_charset(): Couldn't fetch mysqli in /home/eyol16425/public_html/intranet/clases/Conexion.php on line 50
+[30-Apr-2019 19:09:39 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/eyol16425/public_html/intranet/clases/Usuario.php on line 113
+[30-Apr-2019 19:09:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/eyol16425/public_html/intranet/metodos_ajax/usuarios/mostrar_usuarios.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/eyol16425/public_html/intranet/metodos_ajax/usuarios/mostrar_usuarios.php on line 23
+[30-Apr-2019 19:12:06 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection refused in /home/eyol16425/public_html/intranet/clases/Conexion.php on line 44
+[30-Apr-2019 19:12:06 UTC] PHP Warning:  mysqli_set_charset(): Couldn't fetch mysqli in /home/eyol16425/public_html/intranet/clases/Conexion.php on line 50
+[30-Apr-2019 19:12:06 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/eyol16425/public_html/intranet/clases/Usuario.php on line 113
+[30-Apr-2019 19:12:06 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/eyol16425/public_html/intranet/metodos_ajax/usuarios/mostrar_usuarios.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/eyol16425/public_html/intranet/metodos_ajax/usuarios/mostrar_usuarios.php on line 23

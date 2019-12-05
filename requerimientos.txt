@@ -1,0 +1,43 @@
+tabla encuenta
+1)
+tb_encuesta
+id_encuesta
+descripcion_encuenta
+estado_encuesta
+fecha_encuesta timestamp saco parentesis ----> creado en base datos
+2)
+tb_estado_encuesta ---> creado en base datos
+
+3)
+tb_preguntas_encuesta  ----> creado en base datos
+id_pregunta
+pregunta (TEXT)
+id_encuesta
+
+4) modal muestra todas alternativas
+tb_alternativa
+id_alternativa
+descripcion_alternativa
+id_pregunta
+
+CONFIGURACION -> usuarios -----> ok
+1
+------ENCUESTA--------
+listar encuesta ----> ok (estado mostrar descripcion)
+crearEncuesta -----> ok
+modificarEncuesta -----> ok
+eliminar --------> ok
+
+3
+-----PREGUNTA ENCUESTA-----
+listar pregunta de encuestas ---> ok
+crearPregunta ------->ok
+modificarPregunta -----> ok
+eliminarPregunta ----> ok
+
+-----alternativas------
+modal muestra todas las tb_alternativas_pregunta
+listar
+crear
+modificar
+eliminar
