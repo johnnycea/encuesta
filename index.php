@@ -24,7 +24,7 @@
 
   <style>
         body{
-        	background-image: url("./img/fondo.jpg");
+        	background-image: url("./img/fondo1.jpg");
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: cover;
@@ -40,6 +40,9 @@
             border-width: 1px;
 
         }
+        #login{
+           margin-top: 20%;
+        }
   </style>
 
 
@@ -50,7 +53,7 @@
 
 
 
-       <div class="col-12 col-md-4 offset-md-8">
+       <div class="col-12 col-md-4 offset-md-4">
 
     		<div class="container card card-info" style="" id="login">
 
@@ -60,7 +63,7 @@
 
                        <div class="container">
                         <center>
-                          <img src="./img/matlapp.png" alt="" style="width: 130px;height: 80px;">
+                          <img src="./img/logo.jpeg" alt="" style="width: 200px;height: 200px;">
                         </center>
                         </div>
                      </div>
@@ -108,7 +111,7 @@
         .titulos{
           font-size: 30px;
           font-weight: lighter;
-          color:white;
+          color: rgba(0, 0, 0, 0.6);
         }
         .titulos2{
           font-size: 40px;
@@ -118,9 +121,22 @@
           background-color: #991DFB;
         }
         .botonEntrar{
-        background-color: #991DFB;
+        background-color: #369AD0;
         }
       </style>
+
+        <div class="col-md-4 offset-md-4">
+          <br>
+
+            <div class="text-center">
+              <br>
+              <div >
+                <span class="titulos">Consultas Ciudadanas</span>
+              </div>
+            </div>
+
+
+        </div>
 
 
     </div>
@@ -171,7 +187,7 @@ $("#formulario").submit(function(event){
       $.ajax({
         url:"./metodos_ajax/login/verificarDatos.php?u="+usuario+"&c="+contrasena,
         success:function(respuesta){
-           // alert(respuesta);
+           alert(respuesta);
             if(respuesta==1){
               $('#botonIngreso').removeClass("btn-warning");
               $('#botonIngreso').addClass("btn-success");

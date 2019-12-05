@@ -21,7 +21,7 @@
       // $this->servidor= "127.0.0.1";
       $this->servidor= "localhost";
       $this->usuario= "root";
-      $this->clave= "johnnyjohnny";
+      $this->clave= "82537240Guitar";
       $this->bd= "encuenta";
 
 
