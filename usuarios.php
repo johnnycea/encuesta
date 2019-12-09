@@ -29,6 +29,8 @@ $usuario= $usuario->obtenerUsuarioActual();
 <?php cargarMenuPrincipal(); ?>
 
 <br>
+<br>
+<br>
 
 <div class="container-fluid">
   <div class="row">

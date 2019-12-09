@@ -19,10 +19,10 @@
       // $this->bd= "matlapps_colegios";
 
       // $this->servidor= "127.0.0.1";
-      $this->servidor= "localhost";
-      $this->usuario= "root";
-      $this->clave= "82537240Guitar";
-      $this->bd= "encuenta";
+      $this->servidor= "146.66.99.89";
+      $this->usuario= "daemmulc_encuest";
+      $this->clave= "encuestas_123";
+      $this->bd= "daemmulc_encuesta";
 
 
     }

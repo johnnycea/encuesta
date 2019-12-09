@@ -7,6 +7,28 @@ function mostrarCargando(contenedor){
   $("#"+contenedor).html(resultado);
 }
 
+function botonCargando(boton,opcion){
+	//1: Cargando
+	//2: Normal
+
+	switch (opcion) {
+		case 1:
+
+			var texto_boton = boton.html();
+			sessionStorage.setItem("texto_boton",texto_boton);
+
+			$(boton).attr("disabled",true);
+			$(boton).html("...");
+			break;
+		case 2:
+			$(boton).attr("disabled",false);
+			$(boton).html(sessionStorage.getItem("texto_boton"));
+			break;
+		default:
+
+	}
+
+}
 
  function soloLetras(e){
        key = e.keyCode || e.which;

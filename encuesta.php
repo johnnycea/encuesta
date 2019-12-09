@@ -28,42 +28,102 @@ $usuario= $usuario->obtenerUsuarioActual();
 <?php cargarMenuPrincipal(); ?>
 
 <br>
+<br>
+<br>
 
-<div class="container-fluid">
+<div class="container">
   <div class="row">
 
-      <!-- <div class="col-12 col-md-3">
+        <div class=" card col-12">
 
-          <div class="card text-dark">
-            <div class="card-header ">
-                OPCIONES
-            </div>
-            <div class="card-body">
-                 <?php //cargarMenuConfiguraciones(); ?>
+          <div class="container">
+            <br>
+            <div class="card">
+                  <button type="button" onclick="limpiarFormularioEncuesta();" class="btn btn-success" data-target="#modal_encuesta" data-toggle="modal" name="button">CREAR NUEVA ENCUESTA </button>
             </div>
           </div>
+          <div class="container">
 
-      </div> -->
-       <div class="col-12 col-md-9">
+              <!-- <div class="table-responsive" id='contenedor_listado_encuesta'></div> -->
+              <style >
+                  .contenedor_encuesta{
+                     height: 150px;
+                     border-radius: 5px;
+                     padding: 10px;
+                  }
+                  .encuesta{
+                     background: rgba(12,38,38,0.4);
+                     height: 90%;
+                     border-radius: 5px;
+                     border-style: solid;
+                     border-width: 1px;
+                     border-color: #369AD0;
+                  }
+                  .contenedor_titulo_encuesta{
+                     background: black;
+                     height: 25%;
+                     border-top-right-radius: 5px;
+                     border-top-left-radius: 5px;
+                  }
+                  .titulo_encuesta{
+                     color: white;
+                     font-size: 1.3rem;
+                  }
+                  .contenido_encuesta{
+                    height: 75%;
+                    width: 100%;
+                  }
+                  .contenedor_botones{
+                    background: red;
+                    height: 100%;
+                    width: 10%;
+                    float: left;
+                  }
+                  .botones{
+                    height: 50%;
+                    width: 100%;
+                    border-radius: 0;
+                  }
+                  .contenedor_informacion{
+                    height: 100%;
+                    width: 90%;
+                    float: left;
+                  }
+              </style>
 
-          <div  style="" class=" card col-12">
-            <div class="container">
-              <br>
-                 <button type="button" onclick="limpiarFormularioEncuesta();" style="background-color: #F2E660; color:#000000; font-weight: bold;" class="btn btn-warning" data-target="#modal_encuesta" data-toggle="modal" name="button">Crear nueva encuesta </button>
-            </div>
-            <div class="container">
-              <br>
+                <br>
+                <br>
 
-              <div id='contenedor_listado_encuesta'></div>
+                <div class="row" id='contenedor_listado_encuesta' >
+                <!-- <div class="row" > -->
 
-            </div>
+                    <div class="col-12 col-md-6 contenedor_encuesta" >
+                      <div class="encuesta" >
+                          <div class="contenedor_titulo_encuesta" >
+                              <a href="./preguntas.php?id_encuesta='.$filas['id_encuesta'].'" >
+                                  <center><p class="titulo_encuesta">'.$filas['descripcion_encuesta'].'</p></center>
+                              </a>
+                          </div>
+                          <div class="contenido_encuesta" >
+                              <div class="contenedor_botones" >
+                                    <button onclick="cargarInformacionModificarEncuesta('.$filas['id_encuesta'].')" data-target="#modal_encuesta" data-toggle="modal" class="col-12 botones btn btn-warning "><i class="fa fa-edit"></i> </button>
+                                    <button onclick="eliminarEncuesta('.$filas['id_encuesta'].')"  class="col-12 botones btn btn-danger "><i class="fa fa-trash-alt"></i> </button>
+
+                              </div>
+                              <div class="contenedor_informacion" >
+
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+
+                </div>
 
           </div>
 
-       </div>
+        </div>
 
   </div>
-
 </div>
 
 
@@ -83,7 +143,6 @@ $usuario= $usuario->obtenerUsuarioActual();
         <form id="formulario_modal_encuesta" class="" action="javascript:CrearEncuesta()" method="post">
 
 
-           <div class="form-group card border-info" >
 
 
                 <div class="form-group col-12" >
@@ -108,7 +167,6 @@ $usuario= $usuario->obtenerUsuarioActual();
                                    </select>
                                </div>
 
-          </div>
 
                 <div class="form-group" >
                   <div class="col-12">

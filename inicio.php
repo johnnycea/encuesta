@@ -17,12 +17,6 @@
 
 <?php cargarMenuPrincipal();
 ?>
- <style>
-         body{
-           background-color: #EEDDBC;
-           background-image: url('./img/fondo.jpg');
-         }
- </style>
 
 
 </div>

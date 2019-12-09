@@ -158,14 +158,14 @@ function cargarMenuPrincipal(){
 <style>
 
 #contenedor_logo_menu{
-  height:50px;
-  width: 120px;
+  height:70px;
+  width: 70px;
   margin-top: 0px;
   margin-bottom: -10px;
   margin-left: -10px;
 }
 #logo_menu{
-  background-image: url("./img/matlapp.png");
+  background-image: url("./img/logo.jpeg");
   height: 100%;
   width:100%;
   background-size: cover;
@@ -186,7 +186,7 @@ function cargarMenuPrincipal(){
         }
 </style>
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-image: url('img/fondo-azul.jpg');">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-image: url('img/fondo-azul.jpg'); background:#000000; padding-bottom:15px; padding-left:20px;">
   <!--style="background-image: url('img/fondo.jpg');-->
   <a class="navbar-brand" href="#">
     <div id="contenedor_logo_menu">
@@ -212,9 +212,9 @@ function cargarMenuPrincipal(){
            //UN LINK
            echo '<li class="nav-item">';
                  if($url=="encuesta.php"){
-                   echo '<a class="nav-link active" href="./encuesta.php">Encuesta</span></a>';
+                   echo '<h3><a class="nav-link active" href="./encuesta.php">Encuestas</span></a></h3>';
                  }else{
-                   echo '<a class="nav-link" href="./encuesta.php">Encuesta</span></a>';
+                   echo '<h3><a class="nav-link" href="./encuesta.php">Encuestas</span></a></h3>';
                  }
            echo '</li>';
      }
@@ -224,9 +224,9 @@ function cargarMenuPrincipal(){
              //UN LINK
              echo '<li class="nav-item">';
                    if($url=="usuarios.php"){
-                     echo '<a class="nav-link active" href="./usuarios.php">Configuraciones</span></a>';
+                     echo '<h3><a class="nav-link active" href="./usuarios.php">Configuraciones</span></a></h3>';
                    }else{
-                     echo '<a class="nav-link" href="./usuarios.php">Configuraciones</span></a>';
+                     echo '<h3><a class="nav-link" href="./usuarios.php">Configuraciones</span></a></h3>';
                    }
              echo '</li>';
        }
