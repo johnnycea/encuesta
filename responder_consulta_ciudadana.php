@@ -95,7 +95,7 @@ if(validarRut($rut_recibido)){
   <div class="container">
     <br>
     <br>
-    <div class="card bg-info text-white">
+    <div class="card  text-black">
       <?php
 
       if($id_encuesta_activa==""){
@@ -119,7 +119,7 @@ if(validarRut($rut_recibido)){
             ?>
 
             <br>
-            <div class=" " >
+            <div class="card " >
               <form class="" id="formulario_consulta" name="formulario_consulta" action="javascript:guardarRespuestas()" method="post">
 
               <br>
@@ -128,47 +128,51 @@ if(validarRut($rut_recibido)){
                 <hr>
               </div>
 
-                <div class="row">
+                <div class="container">
+                  <div class="row">
 
-                <?php
-                $consulta_listado_preguntas = 'SELECT * FROM tb_preguntas_encuesta where id_encuesta='.$id_encuesta_activa;
+                  <?php
+                  $consulta_listado_preguntas = 'SELECT * FROM tb_preguntas_encuesta where id_encuesta='.$id_encuesta_activa;
 
-                $resultado_listado_preguntas = $conexion->query($consulta_listado_preguntas);
+                  $resultado_listado_preguntas = $conexion->query($consulta_listado_preguntas);
 
-                while($filas_preguntas = $resultado_listado_preguntas->fetch_array()){
+                  while($filas_preguntas = $resultado_listado_preguntas->fetch_array()){
 
-                    echo '<div class="container col-12 col-md-4" >
-                                   <div class="card " >
-                                       <div class="card-header" >
-                                          <center><h5 class="card-title">'.$filas_preguntas['descripcion_pregunta'].'</h5></center>
-                                       </div>
-                                       <div class="card-body" >';
+                      echo '<div class="container col-12 col-md-4" >
+                                     <div class="card " >
+                                         <div class="card-header" >
+                                            <center><h5 class="card-title">'.$filas_preguntas['descripcion_pregunta'].'</h5></center>
+                                         </div>
+                                         <div class="card-body" >';
 
-                                         $consulta_listado_alternativas = 'SELECT * FROM tb_alternativa where id_pregunta='.$filas_preguntas['id_pregunta'];
-                                         $resultado_listado_alternativas = $conexion->query($consulta_listado_alternativas);
+                                           $consulta_listado_alternativas = 'SELECT * FROM tb_alternativa where id_pregunta='.$filas_preguntas['id_pregunta'];
+                                           $resultado_listado_alternativas = $conexion->query($consulta_listado_alternativas);
 
-                                         while($filas_alternativas = $resultado_listado_alternativas->fetch_array()){
+                                           while($filas_alternativas = $resultado_listado_alternativas->fetch_array()){
 
-                                             echo '
-                                             <h6>
-                                                  <input  id="alternativa_'.$filas_alternativas['id_alternativa'].'" required type="radio" name="pregunta_'.$filas_preguntas['id_pregunta'].'" value="'.$filas_alternativas['id_alternativa'].'">
-                                                  <label for="alternativa_'.$filas_alternativas['id_alternativa'].'">'.$filas_alternativas['descripcion_alternativa'].'</label>
-                                             </h6>';
-                                         }
-
-
-                                    echo '</div>
-                                   </div>
-                          </div>
-                          <br>';
-                }
-
-                 ?>
+                                               echo '
+                                               <h6>
+                                                    <input  id="alternativa_'.$filas_alternativas['id_alternativa'].'" required type="radio" name="pregunta_'.$filas_preguntas['id_pregunta'].'" value="'.$filas_alternativas['id_alternativa'].'">
+                                                    <label for="alternativa_'.$filas_alternativas['id_alternativa'].'">'.$filas_alternativas['descripcion_alternativa'].'</label>
+                                               </h6>';
+                                           }
 
 
+                                      echo '</div>
+                                     </div>
+                            </div>
+                            <br>';
+                  }
+
+                   ?>
+
+
+                 </div>
                </div>
                <br>
-
+               <div class="">
+                 <hr>
+               </div>
                <div class="container">
                  <div class="row">
                    <div class="col-12 col-md-4 offset-md-4 ">
