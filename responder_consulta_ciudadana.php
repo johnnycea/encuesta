@@ -1,6 +1,6 @@
 <?php
 require_once 'comun.php';
-require_once './clases/conexion.php';
+require_once './clases/Conexion.php';
 
 $rut_recibido= $_REQUEST['r'];
 
@@ -232,7 +232,7 @@ function guardarRespuestas(){
          swal("Respuesta Guardada","Guardado correctamente.","success");
          setTimeout(function(){
            window.location="./ingreso_consulta_ciudadana.php";
-         },5000);
+         },3000);
        }
 
     }

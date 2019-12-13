@@ -1,6 +1,6 @@
 <?php
 require_once 'comun.php';
-require_once './clases/conexion.php';
+require_once './clases/Conexion.php';
 
 $rut_recibido= $_REQUEST['r'];
 

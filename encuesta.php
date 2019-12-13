@@ -20,11 +20,6 @@ $usuario= $usuario->obtenerUsuarioActual();
 </head>
 <body>
 
-   <style>
-         body{
-           background-color: #EEDDBC;
-         }
-   </style>
 <?php cargarMenuPrincipal(); ?>
 
 <br>

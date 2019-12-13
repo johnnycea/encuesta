@@ -12,6 +12,17 @@ function listarEncuesta(texto_buscar){
 		});
 }
 
+function listarResultadoEncuesta(){
+		$.ajax({
+			url:"./metodos_ajax/encuesta/mostrar_resultado_encuesta.php",
+			method:"POST",
+			success:function(respuesta){
+				alert(respuesta);
+				 $("#contenedor_resultado_encuestas").html(respuesta);
+			}
+		});
+}
+
 function CrearEncuesta(){
 
 			$.ajax({

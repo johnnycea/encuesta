@@ -29,7 +29,13 @@ class Encuesta{
     $Conexion = new Conexion();
     $Conexion = $Conexion->conectar();
 
-    $resultado_consulta = $Conexion->query("select * from tb_encuesta order by id_encuesta desc");
+    $resultado_consulta = $Conexion->query("SELECT id_encuesta,
+        descripcion_encuesta,
+        estado_encuesta,
+        fecha_encuesta,
+        total_encuesta(id_encuesta) as total
+         FROM daemmulc_encuesta.tb_encuesta order by id_encuesta desc");
+
     return $resultado_consulta;
 
  }

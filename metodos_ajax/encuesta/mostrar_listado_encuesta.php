@@ -18,16 +18,15 @@ require_once '../../clases/Encuesta.php';
            echo '
            <div class="col-12 col-md-4">
              <div class="card bg-dark text-white">
-                 <div class="card-header bg-info '.$color_texto.'" >
-                    <center><label class="card-title">'.$filas['descripcion_encuesta'].'</label></center>
-                 </div>
                  <div class="card-body">';
 
-                    if($filas['estado_encuesta']==1){
-                      echo '<center><h6><span class="badge badge-success">Encuesta activa</span></h6></center>';
-                    }else{
-                      echo '<center><h6><span class="badge badge-warning">Encuesta inactiva</span></h6></center>';
+                    echo '<h4><label class="card-title">'.$filas['descripcion_encuesta'].'</label></h4>';
+                    echo '<h6>Encuestados '.$filas['total'].'</h6>';
 
+                    if($filas['estado_encuesta']==1){
+                      echo '<span class="text-success">Encuesta activa</span>';
+                    }else{
+                      echo '<span class="text-warning">Encuesta inactiva</span>';
                     }
 
                 echo '
@@ -40,16 +39,26 @@ require_once '../../clases/Encuesta.php';
 
                      <div class="row">
                          <div class="col-6">
-                              <a href="./preguntas.php?id_encuesta='.$filas['id_encuesta'].'" class="col-12 btn btn-block btn-info "><i class="fa fa-list"></i> Preguntas</a>
+                              <a href="./preguntas.php?id_encuesta='.$filas['id_encuesta'].'" class="col-12 btn btn-sm btn-block btn-info "><i class="fa fa-list"></i> Preguntas</a>
                          </div>
-                         <div class="col-3">
-                            <button onclick="cargarInformacionModificarEncuesta('.$filas['id_encuesta'].')" data-target="#modal_encuesta" data-toggle="modal" class="col-12 btn btn-block btn-warning "><i class="fa fa-edit"></i> </button>
-                         </div>
-                         <div class="col-3">
-                            <button onclick="eliminarEncuesta('.$filas['id_encuesta'].')"  class="col-12 btn btn-block btn-danger "><i class="fa fa-trash-alt"></i> </button>
+                         <div class="col-6">
+                              <a href="./resultado_encuestas.php?id_encuesta='.$filas['id_encuesta'].'" class="col-12 btn btn-sm btn-block btn-info "><i class="fas fa-chart-pie"></i> Resultados</a>
                          </div>
                      </div>
+                     <div>
+                        <hr>
+                     </div>
+                     <div class="row">
+                         <div class="col-6">
+                            <button onclick="cargarInformacionModificarEncuesta('.$filas['id_encuesta'].')" data-target="#modal_encuesta" data-toggle="modal" class="col-12 btn btn-sm btn-block btn-warning "><i class="fa fa-edit"></i> Título</button>
+                         </div>
+                         <div class="col-6">
+                            <button onclick="eliminarEncuesta('.$filas['id_encuesta'].')"  class="col-12 btn btn-sm btn-block btn-danger "><i class="fa fa-trash-alt"></i> Eliminar </button>
+                         </div>
+                     </div>
+
                  </div>
+
              </div>
            </div>
            ';
