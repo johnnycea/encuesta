@@ -7,16 +7,14 @@ require_once '../../clases/Pregunta.php';
   echo '
   <br>
   <br>
-  <table class="table table-responsive table-sm table-striped table-bordered table-hover">
+  <table class="table table-sm table-striped table-bordered table-hover">
      <thead>
 
-        <th>Codigo</th>
-        <th>Descripción</th>
-        <th>Encuesta</th>
+        <th>Pregunta</th>
 
+        <th>Alternativas</th>
         <th>Modificar</th>
         <th>Eliminar</th>
-        <th>Alternativas</th>
 
      </thead>
      <tbody>';
@@ -30,13 +28,19 @@ require_once '../../clases/Pregunta.php';
 
        $listadoPregunta = $Pregunta->obtenerPreguntaxEncuesta(); //$texto_buscar," where id_estado=1 or id_estado=2 "
 
+       if($listadoPregunta->num_rows>0){
+
          while($filas = $listadoPregunta->fetch_array()){
 
                echo '<tr>
 
-                       <td><span id="columna_id_pregunta_'.$filas['id_pregunta'].'" >'.$filas['id_pregunta'].'</span></td>
+                       <span class="d-none" id="columna_id_pregunta_'.$filas['id_pregunta'].'" >'.$filas['id_pregunta'].'</span>
                        <td><span id="columna_descripcion_pregunta_'.$filas['id_pregunta'].'" >'.$filas['descripcion_pregunta'].'</span></td>
-                       <td><span class="" id="columna_id_encuesta_'.$filas['id_pregunta'].'" >'.$filas['id_encuesta'].'</span></td>
+                       <span class="d-none" id="columna_id_encuesta_'.$filas['id_pregunta'].'" >'.$filas['id_encuesta'].'</span>
+
+                       <td>
+                              <button onclick="cargarListadoAlternativas('.$filas['id_pregunta'].')" data-target="#modal_alternativa" data-toggle="modal" class="col-12 btn btn-info "> <i class="fa fa-list"></i> </button>
+                       </td>
 
                        <td>
                              <button onclick="cargarInformacionModificarPregunta('.$filas['id_pregunta'].')" data-target="#modal_pregunta" data-toggle="modal" class="col-12 btn btn-warning "> <i class="fa fa-edit"></i> </button>
@@ -45,12 +49,13 @@ require_once '../../clases/Pregunta.php';
                              <button onclick="eliminarPregunta('.$filas['id_pregunta'].')"  class="col-12 btn btn-danger "> <i class="fa fa-trash-alt"></i> </button>
                        </td>
 
-                       <td>
-                       <button onclick="cargarListadoAlternativas('.$filas['id_pregunta'].')" data-target="#modal_alternativa" data-toggle="modal" class="col-12 btn btn-warning "> <i class="fa fa-edit"></i> Modal </button>
-                       </td>
+
 
                     </tr>';
          }
+       }else{
+         echo '<tr><td colspan="4">NO HA CREADO PREGUNTAS PARA ESTA ENCUESTA</td></tr>';
+       }
 
     echo '
      </tbody>

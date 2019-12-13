@@ -29,7 +29,7 @@ class Encuesta{
     $Conexion = new Conexion();
     $Conexion = $Conexion->conectar();
 
-    $resultado_consulta = $Conexion->query("select * from tb_encuesta");
+    $resultado_consulta = $Conexion->query("select * from tb_encuesta order by id_encuesta desc");
     return $resultado_consulta;
 
  }
@@ -47,8 +47,11 @@ class Encuesta{
    $conexion = new Conexion();
    $conexion = $conexion->conectar();
 
+   if($this->estado_encuesta=="1"){
+      $conexion->query("update tb_encuesta set estado_encuesta=2");
+   }
+
    $consulta = "insert into tb_encuesta (`descripcion_encuesta`, `estado_encuesta`) VALUES ('".$this->descripcion_encuesta."', ".$this->estado_encuesta.");";
-   // echo $consulta;
    $resultado= $conexion->query($consulta);
    return $resultado;
  }
@@ -57,10 +60,14 @@ class Encuesta{
      $conexion = new Conexion();
      $conexion = $conexion->conectar();
 
+     if($this->estado_encuesta=="1"){
+        $conexion->query("update tb_encuesta set estado_encuesta=2");
+     }
+
      $consulta="update tb_encuesta SET `descripcion_encuesta` = '".$this->descripcion_encuesta."',
               `estado_encuesta` = ".$this->estado_encuesta."
                WHERE (`id_encuesta` = ".$this->id_encuesta.")";
-  
+
       // echo $consulta;
      $resultado= $conexion->query($consulta);
      return $resultado;

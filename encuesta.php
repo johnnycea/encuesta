@@ -39,7 +39,7 @@ $usuario= $usuario->obtenerUsuarioActual();
           <div class="container">
             <br>
             <div class="card">
-                  <button type="button" onclick="limpiarFormularioEncuesta();" class="btn btn-success" data-target="#modal_encuesta" data-toggle="modal" name="button">CREAR NUEVA ENCUESTA </button>
+                  <button type="button" onclick="limpiarFormularioEncuesta();" class="btn btn-dark border-danger" data-target="#modal_encuesta" data-toggle="modal" name="button">CREAR NUEVA ENCUESTA </button>
             </div>
           </div>
           <div class="container">
@@ -97,27 +97,8 @@ $usuario= $usuario->obtenerUsuarioActual();
                 <div class="row" id='contenedor_listado_encuesta' >
                 <!-- <div class="row" > -->
 
-                    <div class="col-12 col-md-6 contenedor_encuesta" >
-                      <div class="encuesta" >
-                          <div class="contenedor_titulo_encuesta" >
-                              <a href="./preguntas.php?id_encuesta='.$filas['id_encuesta'].'" >
-                                  <center><p class="titulo_encuesta">'.$filas['descripcion_encuesta'].'</p></center>
-                              </a>
-                          </div>
-                          <div class="contenido_encuesta" >
-                              <div class="contenedor_botones" >
-                                    <button onclick="cargarInformacionModificarEncuesta('.$filas['id_encuesta'].')" data-target="#modal_encuesta" data-toggle="modal" class="col-12 botones btn btn-warning "><i class="fa fa-edit"></i> </button>
-                                    <button onclick="eliminarEncuesta('.$filas['id_encuesta'].')"  class="col-12 botones btn btn-danger "><i class="fa fa-trash-alt"></i> </button>
-
-                              </div>
-                              <div class="contenedor_informacion" >
-
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-
                 </div>
+                <br>
 
           </div>
 
@@ -152,7 +133,7 @@ $usuario= $usuario->obtenerUsuarioActual();
                        <input type="text" required class="form-control" name="txt_descripcion_encuesta" id="txt_descripcion_encuesta" value="">
 
                      </div>
-                       <div class="form-group col-8" >
+                       <div class="form-group col-12" >
                                    <label for="title" class="col-12 control-label">Estado</label>
                                    <select class="form-control" name="select_id_estado" id="select_id_estado">
                                      <option value="" selected disabled>Seleccione:</option>

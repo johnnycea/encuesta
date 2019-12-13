@@ -46,7 +46,7 @@ function crearPregunta(){
 
 function limpiarFormularioPregunta(){
    $("#formulario_modal_pregunta")[0].reset();
-	 $('#txt_id_pregunta').attr("readonly",false);
+	 $('#txt_id_pregunta').val("");
 	 $("#formulario_modal_pregunta").attr("action","javascript:crearPregunta()");
 
 }
@@ -125,6 +125,12 @@ function cargarInformacionModificarAlternativa(id){
 // 		});
 // }
 
+function limpiarCampoIdAlternativa(valor){
+	if(valor==""){
+		$("#txt_id_alternativa").val("");
+	}
+}
+
 function crearAlternativa(){
 
 			$.ajax({
@@ -135,7 +141,8 @@ function crearAlternativa(){
 					  // alert(respuesta);
 					 if(respuesta==1){
 						 swal("Guardado","La alternativa se ha guardado correctamente.","success");
-
+						 $("#txt_id_alternativa").val("");
+						 $("#txt_descripcion_alternativa").val("");
 
 						 cargarListadoAlternativas($("#txt_id_pregunta_alternativa").val());
 					 }else if(respuesta==2){

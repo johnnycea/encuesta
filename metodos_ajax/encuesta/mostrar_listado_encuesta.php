@@ -12,26 +12,69 @@ require_once '../../clases/Encuesta.php';
 
          while($filas = $listadoEncuestas->fetch_array()){
 
-            echo '
+            $color_fondo = ($filas['estado_encuesta']==1) ? "bg-info" : "bg-info";
+            $color_texto = ($filas['estado_encuesta']==1) ? "text-black" : "text-white";
 
-            <div class="col-12 col-md-6 contenedor_encuesta" >
-              <div class="encuesta" >
-                  <div class="contenedor_titulo_encuesta" >
-                      <a href="./preguntas.php?id_encuesta='.$filas['id_encuesta'].'" >
-                          <center><p class="titulo_encuesta">'.$filas['descripcion_encuesta'].'</p></center>
-                      </a>
-                  </div>
-                  <div class="contenido_encuesta" >
-                      <div class="contenedor_informacion">
-                      </div>
-                      <div class="contenedor_botones" >
-                            <button onclick="cargarInformacionModificarEncuesta('.$filas['id_encuesta'].')" data-target="#modal_encuesta" data-toggle="modal" class="col-12 botones btn btn-warning "><i class="fa fa-edit"></i> </button>
-                            <button onclick="eliminarEncuesta('.$filas['id_encuesta'].')"  class="col-12 botones btn btn-danger "><i class="fa fa-trash-alt"></i> </button>
-                      </div>
-                  </div>
-              </div>
-            </div>
-            ';
+           echo '
+           <div class="col-12 col-md-4">
+             <div class="card bg-dark text-white">
+                 <div class="card-header bg-info '.$color_texto.'" >
+                    <center><label class="card-title">'.$filas['descripcion_encuesta'].'</label></center>
+                 </div>
+                 <div class="card-body">';
+
+                    if($filas['estado_encuesta']==1){
+                      echo '<center><h6><span class="badge badge-success">Encuesta activa</span></h6></center>';
+                    }else{
+                      echo '<center><h6><span class="badge badge-warning">Encuesta inactiva</span></h6></center>';
+
+                    }
+
+                echo '
+                 </div>
+                 <div class="card-footer">
+
+                 <input class="d-none" type="hidden" id="columna_id_encuesta_'.$filas['id_encuesta'].'" value="'.$filas['id_encuesta'].'">
+                 <input class="d-none" type="hidden" id="columna_descripcion_encuesta_'.$filas['id_encuesta'].'" value="'.$filas['descripcion_encuesta'].'">
+                 <input class="d-none" type="hidden" id="columna_id_estado_encuesta_'.$filas['id_encuesta'].'" value="'.$filas['estado_encuesta'].'">
+
+                     <div class="row">
+                         <div class="col-6">
+                              <a href="./preguntas.php?id_encuesta='.$filas['id_encuesta'].'" class="col-12 btn btn-block btn-info "><i class="fa fa-list"></i> Preguntas</a>
+                         </div>
+                         <div class="col-3">
+                            <button onclick="cargarInformacionModificarEncuesta('.$filas['id_encuesta'].')" data-target="#modal_encuesta" data-toggle="modal" class="col-12 btn btn-block btn-warning "><i class="fa fa-edit"></i> </button>
+                         </div>
+                         <div class="col-3">
+                            <button onclick="eliminarEncuesta('.$filas['id_encuesta'].')"  class="col-12 btn btn-block btn-danger "><i class="fa fa-trash-alt"></i> </button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+           </div>
+           ';
+
+            // echo '
+            // <div class="col-12 col-md-6 contenedor_encuesta" >
+            //   <div class="encuesta" >
+            //       <div class="contenedor_titulo_encuesta" >
+            //           <input class="d-none" type="hidden" id="columna_id_encuesta_'.$filas['id_encuesta'].'" value="'.$filas['id_encuesta'].'">
+            //           <input class="d-none" type="hidden" id="columna_descripcion_encuesta_'.$filas['id_encuesta'].'" value="'.$filas['descripcion_encuesta'].'">
+            //           <input class="d-none" type="hidden" id="columna_id_estado_encuesta_'.$filas['id_encuesta'].'" value="'.$filas['estado_encuesta'].'">
+            //           <a href="./preguntas.php?id_encuesta='.$filas['id_encuesta'].'" >
+            //               <center><p class="titulo_encuesta">'.$filas['descripcion_encuesta'].'</p></center>
+            //           </a>
+            //       </div>
+            //       <div class="contenido_encuesta" >
+            //           <div class="contenedor_informacion">
+            //           </div>
+            //           <div class="contenedor_botones" >
+            //                 <button onclick="cargarInformacionModificarEncuesta('.$filas['id_encuesta'].')" data-target="#modal_encuesta" data-toggle="modal" class="col-12 botones btn btn-warning "><i class="fa fa-edit"></i> </button>
+            //                 <button onclick="eliminarEncuesta('.$filas['id_encuesta'].')"  class="col-12 botones btn btn-danger "><i class="fa fa-trash-alt"></i> </button>
+            //           </div>
+            //       </div>
+            //   </div>
+            // </div>';
          }
 
 

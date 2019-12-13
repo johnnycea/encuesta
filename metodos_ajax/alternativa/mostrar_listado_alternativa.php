@@ -7,12 +7,10 @@ require_once '../../clases/Pregunta.php';
   echo '
   <br>
   <br>
-  <table class="table table-responsive table-sm table-striped table-bordered table-hover">
-     <thead>
+  <table class="table table-sm table-striped table-bordered table-hover bg-dark text-white">
+     <thead >
 
-        <th>Codigo</th>
-        <th>Descripción</th>
-        <th>Codigo Pregunta</th>
+        <th>Alternativa</th>
         <th>Modificar</th>
         <th>Eliminar</th>
 
@@ -32,9 +30,9 @@ require_once '../../clases/Pregunta.php';
 
                echo '<tr>
 
-                       <td><span id="columna_id_alternativa_'.$filas['id_alternativa'].'" >'.$filas['id_alternativa'].'</span></td>
+                       <span class="d-none" id="columna_id_alternativa_'.$filas['id_alternativa'].'" >'.$filas['id_alternativa'].'</span>
                        <td><span id="columna_descripcion_alternativa_'.$filas['id_alternativa'].'" >'.$filas['descripcion_alternativa'].'</span></td>
-                       <td><span class="" id="columna_id_pregunta_'.$filas['id_alternativa'].'" >'.$filas['id_pregunta'].'</span></td>
+                       <span class="d-none" id="columna_id_pregunta_'.$filas['id_alternativa'].'" >'.$filas['id_pregunta'].'</span>
 
                        <td>
                              <button type="button" onclick="cargarInformacionModificarAlternativa('.$filas['id_alternativa'].')" class="col-12 btn btn-warning "> <i class="fa fa-edit"></i> </button>
