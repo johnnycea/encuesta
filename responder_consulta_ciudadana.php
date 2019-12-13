@@ -170,7 +170,11 @@ if(validarRut($rut_recibido)){
                <br>
 
                <div class="container">
-                  <button type="submit" id="btn_guardar" class="btn btn-warning btn-block" name="button">ENVIAR MIS RESPUESTAS</button>
+                 <div class="row">
+                   <div class="col-12 col-md-4 offset-md-4 ">
+                      <button type="submit" id="btn_guardar" class="btn btn-info btn-block" name="button">ENVIAR MIS RESPUESTAS</button>
+                   </div>
+                 </div>
                </div>
                <br>
 

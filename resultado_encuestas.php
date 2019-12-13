@@ -28,7 +28,7 @@
 
             <div class="card-body">
 
-                <div class="row">
+                <div class="container">
 
                   <div class="row" id='contenedor_resultado_encuestas' >
 

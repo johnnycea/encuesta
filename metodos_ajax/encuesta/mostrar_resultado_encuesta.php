@@ -29,6 +29,7 @@ require_once '../../clases/Pregunta.php';
                         <tbody>
                     ';
 
+
                           $conexion = new Conexion();
                           $conexion = $conexion->conectar();
                           $consulta_listado_alternativas = 'SELECT id_alternativa, descripcion_alternativa, id_pregunta,
@@ -36,6 +37,7 @@ require_once '../../clases/Pregunta.php';
                              FROM tb_alternativa where id_pregunta='.$filas['id_pregunta'];
 
                              $resultado_listado_alternativas = $conexion->query($consulta_listado_alternativas);
+                             $etiquetas_grafico = "";
 
                             while($filas_alternativas = $resultado_listado_alternativas->fetch_array()){
 
@@ -51,6 +53,8 @@ require_once '../../clases/Pregunta.php';
                                   </td>
                                 </tr>
                                 ';
+
+                                $etiquetas_grafico = $etiquetas_grafico."{ label: '".$filas_alternativas['descripcion_alternativa']."', value: ".$filas_alternativas['votos']." },";
                             }
 
                     echo '</tbody>
@@ -67,8 +71,7 @@ require_once '../../clases/Pregunta.php';
                         // Chart data records -- each entry in this array corresponds to a point on
                         // the chart.
                         data: [
-                        { label: \'si\', value: 20 },
-                        { label: \'no\', value: 10 },
+                        '.$etiquetas_grafico.'
                         ],
                         labels: [\'Value\']
                         });
