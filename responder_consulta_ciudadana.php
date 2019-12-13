@@ -95,16 +95,23 @@ if(validarRut($rut_recibido)){
   <div class="container">
     <br>
     <br>
-    <div class="card  text-black">
+    <div class="card border-info text-black">
+
+      <div class="container">
+       <center>
+         <img src="./img/logo.jpeg" alt="" style="width: 70px;height: 70px; padding:5px;">
+       </center>
+       </div>
+
       <?php
 
       if($id_encuesta_activa==""){
-        echo "<center><h1>No hay encuestas activas por responder.</h1></center>
+        echo "<center><h2>No hay encuestas activas por responder.</h2></center>
         </div>
         ";
       }else{
           if($resultado_consulta_respuesta->num_rows>0){
-            echo '<center><h1>Ya respondió esta encuesta</h1></center>
+            echo '<center><h2>Ya respondió esta encuesta</h2></center>
             </div>
             <br>
             <center>
@@ -112,21 +119,21 @@ if(validarRut($rut_recibido)){
             </center>
             ';
           }else{
-            echo "<center><h1>\"".$resultado_encuesta_activa['descripcion_encuesta']."\"</h1></center>
+            echo "<center><h2>\"".$resultado_encuesta_activa['descripcion_encuesta']."\"</h2></center>
             </div>
             ";
 
             ?>
 
             <br>
-            <div class="card " >
+            <div class="card border-info" >
               <form class="" id="formulario_consulta" name="formulario_consulta" action="javascript:guardarRespuestas()" method="post">
 
               <br>
-              <center><h5>Responda a las siguientes preguntas:</h5></center>
-              <div class="">
+              <!-- <center><h5>Responda a las siguientes preguntas:</h5></center> -->
+              <!-- <div class="">
                 <hr>
-              </div>
+              </div> -->
 
                 <div class="container">
                   <div class="row">
@@ -139,7 +146,7 @@ if(validarRut($rut_recibido)){
                   while($filas_preguntas = $resultado_listado_preguntas->fetch_array()){
 
                       echo '<div class="container col-12 col-md-4" >
-                                     <div class="card " >
+                                     <div class="card border-info" >
                                          <div class="card-header" >
                                             <center><h5 class="card-title">'.$filas_preguntas['descripcion_pregunta'].'</h5></center>
                                          </div>
